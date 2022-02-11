@@ -30,12 +30,12 @@ public async Task StartAsync(CancellationToken cancellationToken)
         options.UseAutofac();
         options.Services.AddLogging(loggingBuilder => loggingBuilder.AddSerilog());
         
-        options.Services.AddTransient<HelloWorldService>();
+        options.Services.AddTransient<IHelloWorldAppService,HelloWorldAppService>();
     });
 
     await _abpApplication.InitializeAsync();
 
-    var helloWorldService = _abpApplication.ServiceProvider.GetRequiredService<HelloWorldService>();
+    var helloWorldService = _abpApplication.ServiceProvider.GetRequiredService<IHelloWorldAppService>();
     await helloWorldService.SayHelloAsync();
 }
 

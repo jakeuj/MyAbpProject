@@ -4,9 +4,9 @@ using Volo.Abp.DependencyInjection;
 
 namespace MyProject.Application;
 
-public class HelloWorldService : MyProjectAppService
+public class HelloWorldAppService : MyProjectAppService,IHelloWorldAppService
 {
-    public HelloWorldService(IAbpLazyServiceProvider lazyServiceProvider)
+    public HelloWorldAppService(IAbpLazyServiceProvider lazyServiceProvider)
     {
         LazyServiceProvider = lazyServiceProvider;
     }
