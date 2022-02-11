@@ -1,5 +1,6 @@
 # MyAbpProject
 
+[https://www.dotblogs.com.tw/jakeuj/2022/02/11/abp-console](https://www.dotblogs.com.tw/jakeuj/2022/02/11/abp-console)
 ```
 Host terminated unexpectedly!
 System.NullReferenceException: Object reference not set to an instance of an object.
